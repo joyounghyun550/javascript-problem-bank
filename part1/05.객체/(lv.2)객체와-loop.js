@@ -10,6 +10,14 @@
  */
 function countProperties(obj) {
   // TODO
+  let count = 0; // 키 개수를 세기 위한 변수 초기화
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      // obj의 소유 키인지 확인
+      count++; // 소유 키일 경우 카운트 증가
+    }
+  }
+  return count; // 최종 카운트 반환
 }
 
 export { countProperties };
